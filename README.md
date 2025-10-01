@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a55b67b9-9a13-49b8-b0eb-d0d2d4ac0356" 
+  <img src="https://github.com/user-attachments/assets/3cc3ad6a-df11-45eb-9d97-815bd7c8a4c0" 
        alt="PokemonCard" 
        width="200"/>
 </p>
