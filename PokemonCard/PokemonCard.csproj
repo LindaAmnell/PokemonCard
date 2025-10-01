@@ -10,16 +10,16 @@
 
   <ItemGroup>
     <None Remove="Images\Eevee3.jpg" />
+    <None Remove="Images\fighting_icon_transparent.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Images\Eevee3.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\NewFolder\" />
+    <Content Include="Images\fighting_icon_transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

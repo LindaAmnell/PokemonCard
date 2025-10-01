@@ -60,26 +60,40 @@
 
 
                 <!--Stage box-->
-                <Border Grid.Column="0" CornerRadius="2 0 10 2"  VerticalAlignment="Top" Padding="5 0" Background="Silver"  BorderBrush="Gray" BorderThickness="1" >
-                    <TextBlock Text="Basic"  />
+                <Border Grid.Column="0" CornerRadius="2 0 20 2"  VerticalAlignment="Top" Padding="9 2"  BorderBrush="Gray" BorderThickness="1" >
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#FFFFFF" Offset="0"/>
+                            <GradientStop Color="#C0C0C0" Offset="0.5"/>
+                            <GradientStop Color="#A0A0A0" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect Color="Black" BlurRadius="4" ShadowDepth="1" Opacity="0.3"/>
+                    </Border.Effect>
+                    <TextBlock Text="Basic" FontFamily="Cooper Black" />
                 </Border>
 
                 <!-- NAME -->
-                <Border Grid.Column="1"  Margin="2" Padding="5">
-                    <TextBlock Text="NAME" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Border Grid.Column="1"  Margin="2" >
+                    <TextBlock Text="Eevee" FontWeight="Bold" FontSize="20" FontFamily="Comic Sans MS" />
                 </Border>
 
                 <!-- EMPTY SPACE -->
                 <Border  Grid.Column="2" BorderBrush="Gray" BorderThickness=" 0 0 3 0" Margin="2" Padding="5" CornerRadius="0 0 35 0">
-                    <TextBlock Text="(empty)" HorizontalAlignment="Center" VerticalAlignment="center"/>
+                    <TextBlock  HorizontalAlignment="Center" VerticalAlignment="center"/>
                 </Border>
 
                 <!-- HP -->
-                <Border Grid.Column="3" Margin="2" Padding="5">
-                    <TextBlock Text="HP" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Border Grid.Column="3" Margin="2" >
+                    <StackPanel  Orientation="Horizontal">
+                        <TextBlock Text="HP" FontSize="10" FontWeight="Bold" VerticalAlignment="Bottom" Margin="0 0 0 4"/>
+                        <TextBlock Text="70" FontSize="30"  FontWeight="Bold" VerticalAlignment="Bottom"    />
+                    </StackPanel>
+
                 </Border>
                 <!--Icon-->
-                <Border Width="25" Height="30" Grid.Column="4" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2"
+                <Border Width="25" Height="25" Grid.Column="4" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2" 
                         CornerRadius="30" Background="LightGray" >
                     <Border.Effect>
                         <DropShadowEffect Color="Gray" BlurRadius="8" ShadowDepth="0" Opacity="0.8"/>
@@ -97,24 +111,37 @@
 
 
             <!-- IMAGE ROW 1 -->
-            <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="12 6 12 0" BorderBrush="Gray" 
-                BorderThickness="2 2 2 0" Background="LightGray" CornerRadius="3"   >
-                <!--
+            <Border Grid.Row="1" Grid.ColumnSpan="3" Margin="12 0 12 0" BorderBrush="silver" 
+                BorderThickness="3 3 3 0" CornerRadius="3">
+                <Border BorderBrush="Black"  BorderThickness="1 1 1 0" CornerRadius="2"   >
+                    <!--
              <Rectangle Width="220" Height="220" Fill="DarkGray" HorizontalAlignment="Center"
                        VerticalAlignment="Center"/> -->
-                <Image Source="/Images/Eevee3.jpg" Stretch="Fill"/> 
+                    <Image Source="/Images/Eevee3.jpg" Stretch="Fill"/>
+                </Border>
             </Border>
 
             <!-- SUB INFO ROW 2-->
-            <Border Grid.Row="2" Grid.ColumnSpan="3" CornerRadius="10 0 30 10" BorderBrush="Gray" BorderThickness="3" VerticalAlignment="Top" >
-                <TextBlock Text="SUB-INFO / NO / POKEMON TYPE / HT WT" TextAlignment="Center"/>
+            <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="1 0 0 0" CornerRadius="8 0 30 8" VerticalAlignment="Top" Padding="6 2" >
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#A0A0A0" Offset="0"/>
+                        <GradientStop Color="#A0A0A0" Offset="0.5"/>
+                        <GradientStop Color="#A0A0A0" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border BorderBrush="Silver" CornerRadius="8 3 30 8" Background="Silver" >
+                    <TextBlock FontSize="7" Text="NO: 0133 Evolution Pokémon HT: 1' WT: 14.3 Ibs" TextAlignment="Center" />
+                </Border>
             </Border>
 
             <Border Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2"
                 Background="Silver"
-                    CornerRadius="0 0 0 7"
-                Margin="6 0 0 0" Padding="0 30 5 0" >
-
+                CornerRadius="0 0 0 3"
+                Margin="8 0 0 0" Padding="0 30 5 0" >
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" BlurRadius="5" ShadowDepth="1" Opacity="0.5" Direction="180"/>
+                </Border.Effect>
                 <StackPanel>
 
                     <!-- ATTACK 1 ROW 3 -->
@@ -136,7 +163,7 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- HEADER ROW -->
-                        <Border Width="25" Height="30" Grid.Column="0" Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2"
+                        <Border Width="20" Height="20" Grid.Column="0" Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2"
                             CornerRadius="30" Background="LightGray">
                             <Border.Effect>
                                 <DropShadowEffect Color="Gray" BlurRadius="6" ShadowDepth="0" Opacity="0.4"/>
@@ -151,19 +178,18 @@
                             </Viewbox>
                         </Border>
 
-                        <Border Grid.Row="0" Grid.Column="1"  Padding="5" Margin="2">
-                            <TextBlock Text="ATTACK NAME" TextAlignment="Center"/>
+                        <Border Grid.Row="0" Grid.Column="1" Margin="2">
+                            <TextBlock  Text="Colorful Friends" FontSize="15" FontWeight="Bold"  TextAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic"/>
                         </Border>
 
                         <Border Grid.Row="0" Grid.Column="2"  Padding="5" Margin="2">
-                            <TextBlock Text="DMG"/>
+                            <TextBlock Text="   "/>
                         </Border>
 
 
                         <!-- DESCRIPTION ROW -->
-                        <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0"  
-                            Padding="5" Margin="2">
-                            <TextBlock Text="ATTACK DESCRIPTION GOES HERE" TextWrapping="Wrap"/>
+                        <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" Margin="2">
+                            <TextBlock FontSize="9" Text="Search your deck for up to 3 Pok'emon of different types, reveal them, and put them into your hand. Then, shuffle your deck." TextWrapping="Wrap"/>
                         </Border>
 
                     </Grid>
@@ -188,7 +214,7 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- HEADER ROW -->
-                        <Border Width="25" Height="30" Grid.Column="0" Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2"
+                        <Border Width="20" Height="20" Grid.Column="0" Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2"
                             CornerRadius="30" Background="LightGray">
                             <Border.Effect>
                                 <DropShadowEffect Color="Gray" BlurRadius="6" ShadowDepth="0" Opacity="0.4"/>
@@ -201,17 +227,17 @@
                             </Viewbox>
                         </Border>
 
-                        <Border Grid.Row="0" Grid.Column="1"  Padding="5" Margin="2">
-                            <TextBlock Text="ATTACK NAME" TextAlignment="Center"/>
+                        <Border Grid.Row="0" Grid.Column="1">
+                            <TextBlock Text="Skip" FontSize="15" FontWeight="Bold" TextAlignment="Center"  VerticalAlignment="Center" FontFamily="Century Gothic" Margin="0 0 61 0"/>
                         </Border>
 
                         <Border Grid.Row="0" Grid.Column="2"  Padding="5" Margin="2">
-                            <TextBlock Text="DMG"/>
+                            <TextBlock Text="10" FontSize="16" FontWeight="DemiBold"/>
                         </Border>
                         <!-- DESCRIPTION ROW -->
                         <Border Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" 
                                  Padding="5" Margin="2">
-                            <TextBlock Text="ATTACK DESCRIPTION GOES HERE  " TextWrapping="Wrap"/>
+                            <TextBlock Text="  " TextWrapping="Wrap"/>
                         </Border>
 
                     </Grid>
@@ -220,7 +246,7 @@
 
 
             <!-- WEAK / RESIST / RETREAT -->
-            <Border Grid.Row="5" Grid.ColumnSpan="3" BorderBrush="Gray" BorderThickness="0 2" Margin="  0" >
+            <Border Grid.Row="5" Grid.ColumnSpan="3" BorderBrush="Gray" BorderThickness="0 2" Margin="3 0" >
                 <Grid Grid.Row="5" Grid.ColumnSpan="3" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="10*"/>
@@ -229,16 +255,48 @@
                         <ColumnDefinition Width="111*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Border Grid.Column="0" BorderBrush="Gray" BorderThickness=" 0 0 1 0" Padding="5" Margin="2 0" Grid.ColumnSpan="2">
-                        <TextBlock Text="WEAKNESS"/>
+                    <Border Grid.Column="0" BorderBrush="Gray" BorderThickness=" 0 0 1 0" Grid.ColumnSpan="2">
+                        <StackPanel Orientation="Horizontal" >
+                            <TextBlock Text="weakness" FontSize="8" Margin=" 0 0 2 0" VerticalAlignment="Center"/>
+
+                            <!--    
+                            <Border Width="20" Height="20" Grid.Column="0" Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="2" Padding="2"
+                                    CornerRadius="30" Background="SaddleBrown">
+                                <Border.Effect>
+                                    <DropShadowEffect Color="Gray" BlurRadius="6" ShadowDepth="0" Opacity="0.4"/>
+                                </Border.Effect>
+                                <Viewbox Stretch="Uniform">
+                                    <Polygon Fill="Black" Stroke="Black" StrokeThickness="1"
+                                        Points="50,0 61,35 98,35 68,57
+                                            79,91 50,70 21,91 32,57
+                                             2,35 39,35"/>
+                                </Viewbox>
+                            </Border> -->
+                            <Image  Width="15" Height="15" Source="/Images/fighting_icon_transparent.png"  />
+                            <TextBlock Text="x" FontSize="10" VerticalAlignment="Center" Margin="1" />
+                            <TextBlock  Text="2" FontSize="10" VerticalAlignment="Center" />
+
+                        </StackPanel>
                     </Border>
 
-                    <Border Grid.Column="2" BorderBrush="Gray" BorderThickness=" 0 0 2 0" CornerRadius=" 0 0 30 0" Padding="5" Margin="2">
-                        <TextBlock Text="RESISTANCE"/>
+                    <Border Grid.Column="2" BorderBrush="Gray" BorderThickness=" 0 0 2 0" CornerRadius=" 0 0 30 0">
+                        <TextBlock Margin="6 0 0 0 " FontSize="8" Text="resistance" VerticalAlignment="Center"/>
                     </Border>
 
-                    <Border Grid.Column="3" Padding="5" Margin="2,2,2,2">
-                        <TextBlock Text="RETREAT"/>
+                    <Border Grid.Column="3"  Margin="2 0 0 0 " VerticalAlignment="Center">
+                        <TextBlock Text="retreat" FontSize="8" Margin="3 0 0 0"/>
+                    </Border>
+                    <Border Width="15" Height="15" Grid.Column="3" Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="0 1 10 0" Padding="1"
+                            CornerRadius="30" Background="LightGray" HorizontalAlignment="Center" >
+                        <Border.Effect>
+                            <DropShadowEffect Color="Gray" BlurRadius="6" ShadowDepth="0" Opacity="0.4"/>
+                        </Border.Effect>
+                        <Viewbox Stretch="Uniform">
+                            <Polygon Fill="Black" Stroke="Black" StrokeThickness="1"
+                                    Points="50,0 61,35 98,35 68,57
+                                     79,91 50,70 21,91 32,57
+                                     2,35 39,35"/>
+                        </Viewbox>
                     </Border>
                 </Grid>
             </Border>
@@ -251,16 +309,31 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Grid.Column="0"  Padding="5" Margin="2">
-                    <TextBlock FontSize="8" Text="ICON ICON # / SET"/>
+                <Border Grid.Column="0">
+                    <StackPanel Orientation="Vertical" >
+                        <TextBlock FontSize="6" Text="Illus. Narumi Sato" />
+                        <StackPanel Height="12" Orientation="Horizontal">
+                            <Border CornerRadius="2" BorderThickness="0.5" BorderBrush="Black" Background="White">
+                                <TextBlock Text="G" FontSize="9" FontWeight="Bold"  VerticalAlignment="Center" />
+                            </Border>
+                            <Border Margin="2 0 0 0" CornerRadius="2" BorderBrush="White" Background="Black" BorderThickness="0.3" >
+                                <StackPanel Height="10" Orientation="Horizontal">
+                                    <TextBlock Foreground="White" FontSize="8" Text="MEW" />
+                                    <TextBlock Foreground="White" VerticalAlignment="Bottom" FontSize="6" Text="EN" />
+                                </StackPanel>
+                            </Border>
+                            <TextBlock VerticalAlignment="Bottom" FontSize="6" Text="133/165" Margin=" 2 0 0 0" />
+                            <TextBlock Text="●" VerticalAlignment="Center" FontSize="10" Margin="0 3 0 0"/>
+                        </StackPanel>
+                    </StackPanel>
                 </Border>
 
-                <Border Grid.Column="1"  Padding="5" Margin="2">
-                    <TextBlock FontSize="8" Text="COPYWRIGHT TEXT"/>
-                </Border>
 
-                <Border Grid.Column="2" Padding="5" Margin="2">
-                    <TextBlock FontSize="8" Text="JAYADADA WADADAD NICE" TextWrapping="Wrap"/>
+
+                <TextBlock  FontSize="6" Text="© 2023 Pok'emon / Nintendo / Creatures / GAME FREAK" Grid.ColumnSpan="2" Margin="17,26,85,-19" Grid.Column="1"/>
+
+                <Border Grid.Column="2" >
+                    <TextBlock Width="170" HorizontalAlignment="Right" TextWrapping="Wrap" FontSize="8" Text="Its ability to evolve into many forms allows it to adapt smoothly and perfectly any environment." />
                 </Border>
 
                 <!--asdklaökd-->
