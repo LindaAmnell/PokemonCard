@@ -8,13 +8,18 @@
         Title="MainWindow" Height="600" Width="400">
 
 
-    <Border BorderBrush="Gray" 
-        BorderThickness="1" 
+    <Border  
+        BorderThickness="15" 
         CornerRadius="12"
-        Background="Gray"
-        Padding="5"
-        Margin="20">
-        <Grid Margin="8" Background="LightGray" >
+        Margin="10">
+        <Border.BorderBrush>
+            <LinearGradientBrush>
+                <GradientStop Color="Gray" Offset="0"/>
+                <GradientStop Color="LightGray" Offset="0.6"/>
+                <GradientStop Color="Gray" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Grid Background="LightGray" >
 
 
             <!-- Rows for card sections -->
@@ -124,25 +129,41 @@
             <!-- SUB INFO ROW 2-->
             <Border Grid.Row="2" Grid.ColumnSpan="3" Margin="1 0 0 0" CornerRadius="8 0 30 8" VerticalAlignment="Top" Padding="6 2" >
                 <Border.Background>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#A0A0A0" Offset="0"/>
-                        <GradientStop Color="#A0A0A0" Offset="0.5"/>
-                        <GradientStop Color="#A0A0A0" Offset="1"/>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="DarkGray" Offset="0" />
+                        <GradientStop Color="White" Offset="0.5"/>
+                        <GradientStop Color="DarkGray" Offset="1" />
                     </LinearGradientBrush>
                 </Border.Background>
-                <Border BorderBrush="Silver" CornerRadius="8 3 30 8" Background="Silver" >
-                    <TextBlock FontSize="7" Text="NO: 0133 Evolution Pokémon HT: 1' WT: 14.3 Ibs" TextAlignment="Center" />
+                <Border CornerRadius="8 3 30 8" >
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="DarkGray" Offset="0" />
+                            <GradientStop Color="White" Offset="0.5"/>
+                            <GradientStop Color="DarkGray" Offset="1" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <TextBlock FontSize="7"  Text="NO: 0133 Evolution Pokémon HT: 1' WT: 14.3 Ibs" TextAlignment="Center" />
                 </Border>
             </Border>
 
-            <Border Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2"
-                Background="Silver"
-                CornerRadius="0 0 0 3"
-                Margin="8 0 0 0" Padding="0 30 5 0" >
+
+            <Border BorderThickness="1 0" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="5" Background="silver" HorizontalAlignment="Left">
                 <Border.Effect>
-                    <DropShadowEffect Color="Black" BlurRadius="5" ShadowDepth="1" Opacity="0.5" Direction="180"/>
+                 <DropShadowEffect 
+                Color="Black" 
+                Direction="0" 
+                ShadowDepth="0" 
+                BlurRadius="10" 
+                Opacity="0.4"/>
                 </Border.Effect>
-                <StackPanel>
+            </Border>
+            <Border Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="2"
+               
+                Margin="8 0 0 0" Padding="0 30 5 0" >
+              
+
+                <StackPanel >
 
                     <!-- ATTACK 1 ROW 3 -->
                     <Grid  Grid.Row="3" Grid.ColumnSpan="3" Margin="6 0 0 0"  >
@@ -228,7 +249,7 @@
                         </Border>
 
                         <Border Grid.Row="0" Grid.Column="1">
-                            <TextBlock Text="Skip" FontSize="15" FontWeight="Bold" TextAlignment="Center"  VerticalAlignment="Center" FontFamily="Century Gothic" Margin="0 0 61 0"/>
+                            <TextBlock Text="Skip" FontSize="15" FontWeight="Bold" TextAlignment="Center"  VerticalAlignment="Center" FontFamily="Century Gothic" Margin="0 0 71 0"/>
                         </Border>
 
                         <Border Grid.Row="0" Grid.Column="2"  Padding="5" Margin="2">
@@ -330,7 +351,7 @@
 
 
 
-                <TextBlock  FontSize="6" Text="© 2023 Pok'emon / Nintendo / Creatures / GAME FREAK" Grid.ColumnSpan="2" Margin="17,26,85,-19" Grid.Column="1"/>
+                <TextBlock  FontSize="6" Text="© 2023 Pok'emon / Nintendo / Creatures / GAME FREAK" Grid.ColumnSpan="2" Margin="17,29,85,-22" Grid.Column="1"/>
 
                 <Border Grid.Column="2" >
                     <TextBlock Width="170" HorizontalAlignment="Right" TextWrapping="Wrap" FontSize="8" Text="Its ability to evolve into many forms allows it to adapt smoothly and perfectly any environment." />
